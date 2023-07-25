@@ -6,10 +6,14 @@ import { HttpClient } from '@angular/common/http';
 })
 export class CargaService {
 
-  machineData = 'AQUI VA LA UBICACION DEL CSV'
-  constructor(private http: HttpClient) { }
+  machineData = 'https://cks.com.co/filesTest/90.csv'
+  // machineData = 'src/pdata/90.csv';
 
-  getInfo(){
-    return this.http.get(this.machineData,{responseType: 'text'});
+  constructor(private http: HttpClient) {}
+
+  getInfo() {
+    return this.http.get(this.machineData, { responseType: 'text' });
   }
 }
+
+// Access-Control-Allow-Origin: *
